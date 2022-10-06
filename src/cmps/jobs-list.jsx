@@ -4,8 +4,6 @@ import { JobPreview } from './jobs-preview'
 
 export const JobList = ({ jobs, updateDate }) => {
 
-   // console.table(jobs)
-
    return (
       <section className="job-list" >
          <div className="header-container">
