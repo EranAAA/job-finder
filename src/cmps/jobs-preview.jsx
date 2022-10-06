@@ -30,7 +30,7 @@ export const JobPreview = ({ job }) => {
          <div className="date">{`${new Date(job.jobDate).toLocaleDateString('en-GB')} (${job.jobRealtiveDate})`}</div>
          <div className="source" style={{ '--c': sourceColor() }}>{job.source}</div>
 
-         <div className="link"><a href={job.linkPage} target="#">Page <FiExternalLink /></a></div>
+         <div className="link"><a href={job.linkPage} target="_blank">Page <FiExternalLink /></a></div>
       </section>
    )
 }

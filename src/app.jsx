@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import './style/main.scss'
 
 import { AppJob } from './page/app-job'
-import { loadJobs } from './store/job/job.action'
+import { loadJobs, loadDemoJobs } from './store/job/job.action'
 
 export function App() {
 
@@ -16,7 +16,8 @@ export function App() {
    }, [])
 
    const getJobList = async () => {
-      await dispatch(loadJobs())
+      // await dispatch(loadJobs())
+      await dispatch(loadDemoJobs())
    }
 
    return (

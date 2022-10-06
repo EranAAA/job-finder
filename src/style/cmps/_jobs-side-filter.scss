@@ -5,7 +5,6 @@
    justify-content: flex-start;
    gap: 20px;
 
-   // padding-top: 160px;
    border-radius: 0 30px 30px 0;
    background-color: #FFF;
 
@@ -16,6 +15,8 @@
       padding: 10px;
       background-color: #fff;
       border-radius: 10px;
+
+      z-index: 1000;
 
       svg {
          width: 20px;
@@ -30,18 +31,15 @@
       flex-direction: column;
       gap: 10px;
 
-      &.hidden {
-         // visibility: hidden;
-         // opacity: 0;
-         // transition: visibility 0s, opacity 0.9s linear;
-         display: none;
-      }
+      padding-top: 160px;
+
 
       &.full-screen {
          position: fixed;
          left: 0;
          width: 100vw;
-         height: 100vh;
+         height: calc(100vh);
+         padding-top: 100px;
 
          background-color: #FFF;
 
@@ -49,9 +47,21 @@
          flex-direction: column;
          align-content: center;
          align-items: center;
+         justify-content: flex-start;
+         // gap: 20px;
 
          z-index: 1000;
+
+         overflow-y: scroll;
       }
+
+      &.hidden {
+         // visibility: hidden;
+         // opacity: 0;
+         // transition: visibility 0s, opacity 0.9s linear;
+         display: none;
+      }
+
 
       .side-cls-btn {
          position: absolute;
@@ -61,8 +71,8 @@
          z-index: 10000;
 
          svg {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
          }
 
       }
@@ -76,6 +86,9 @@
          justify-content: center;
          gap: 20px;
 
+         position: absolute;
+         top: 0;
+
          margin-top: 10px;
 
          .github {
@@ -86,15 +99,16 @@
       }
 
       .card {
-         width: 15rem;
+         width: 100%;
+         min-width: 250px;
+         padding: 10px;
          background-color: #fff;
          overflow: hidden;
-         margin: 0 0.5rem;
 
          .card-body {
-            padding: 1rem 1.2rem;
+            padding: 10px;
             overflow: scroll;
-            max-height: 297px;
+            max-height: 159px;
             background-color: aliceblue;
             border-radius: 3px;
 
@@ -107,8 +121,8 @@
          }
 
          label {
-            font-size: rem(12px);
-            font-weight: 500;
+            font-size: rem(13px);
+            font-weight: 400;
             color: #343434;
             margin-left: 0.5rem;
 
