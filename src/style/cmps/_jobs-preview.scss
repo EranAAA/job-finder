@@ -1,0 +1,117 @@
+.job-preview {
+
+   position: relative;
+
+   height: 270px;
+   width: 288px;
+   min-width: 270px;
+
+   border-radius: 10px;
+   padding: 20px;
+
+   font-size: rem(16px);
+   text-align: left;
+
+   background-color: rgba(255, 255, 255, 1);
+
+   display: flex;
+   flex-direction: column;
+
+   @media screen and (max-width: 890px){
+      width: 100%;
+      min-width: none;
+
+   }
+
+   img {
+      height: 70px;
+      width: 70px;
+
+      border-radius: 20px;
+      margin-bottom: 10px;
+
+      display: flex;
+      justify-content: flex-start;
+   }
+
+   .title {
+      font-size: rem(16px);
+      font-weight: 500;
+      padding-bottom: 10px;
+   }
+
+   .publisher {
+      font-size: rem(12px);
+      font-weight: 500;
+   }
+
+   .location {
+      font-size: rem(12px);
+      font-weight: 500;
+      padding-bottom: 10px;
+      color: #00000099;
+   }
+
+   .date {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      padding: 20px;
+      font-size: rem(12px);
+      font-weight: 500;
+      color: #00000099;
+   }
+
+   .source {
+      /* adjust the below to control the shape */
+      --d: 5px;
+      --g: 16px;
+      --c: #345787;
+      /**/
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(29.29%, -100%) rotate(45deg);
+      /* 29.29% = 100%*(1 - cos(45deg)) */
+      color: #fff;
+      text-align: center;
+      width: 126px;
+      transform-origin: bottom left;
+      padding: 5px 0 calc(var(--d) + 5px);
+      background:
+         linear-gradient(135deg, transparent var(--g), var(--c) calc(var(--g) - 0.3px)) left,
+         linear-gradient(-135deg, transparent var(--g), var(--c) calc(var(--g) - 0.3px)) right;
+      background-size: 51% 100%;
+      background-repeat: no-repeat;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)), 0 100%)
+   }
+
+   .link {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         gap: 5px;
+
+         color: #FFFFFF;
+         background-color: #121212;
+
+         font-size: rem(14px);
+         text-decoration: none;
+         text-align: center;
+
+         width: 100px;
+         padding: 5px;
+         border-radius: 10px;
+      }
+   }
+
+}
