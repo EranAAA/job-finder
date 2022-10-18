@@ -2,12 +2,15 @@
 
    position: relative;
 
-   height: 220px;
-   width: 320px;
-   min-width: 270px;
+   // height: 220px;
+   // width: 320px;
+   // min-width: 270px;
+
+   width: calc(100%);
+   // min-width: none;
 
    border-radius: 10px;
-   padding: 20px;
+   // padding: 20px;
 
    font-size: rem(16px);
    text-align: left;
@@ -16,50 +19,75 @@
 
    display: flex;
    flex-direction: column;
+   margin-top: 10px;
+   // padding: 0.8rem;
+   word-break: break-word;
+   // @media screen and (max-width: 890px) {
+   //    width: calc(100% - 40px);
+   //    min-width: none;
+   // }
 
-   @media screen and (max-width: 890px){
-      width: calc(100% - 40px);
-      min-width: none;
-   }
+   // @media screen and (max-width: 890px) {
+   //    width: calc(100%);
+   //    min-width: none;
+   // }
 
-   img {
-      height: 70px;
-      width: 70px;
 
-      border-radius: 20px;
-      margin-bottom: 10px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
+   .job-preview-container {
       display: flex;
       justify-content: flex-start;
-   }
+      background-color: #fff;
 
-   .title {
-      font-size: rem(16px);
-      font-weight: 500;
-      padding-bottom: 10px;
-   }
+      .img {
+         img {
+            width: 56px;
+            height: 56px;
+            object-fit: scale-down;
+            // border-radius: 20px;
+            // margin-bottom: 10px;
+            background-clip: content-box;
 
-   .publisher {
-      font-size: rem(12px);
-      font-weight: 500;
-   }
+            display: flex;
+            justify-content: flex-start;
+         }
+      }
 
-   .location {
-      font-size: rem(12px);
-      font-weight: 500;
-      padding-bottom: 10px;
-      color: #00000099;
-   }
+      .data {
+         padding-left: 0.8rem;
 
-   .date {
-      position: absolute;
-      right: 0;
-      bottom: 5px;
+         .title {
+            font-size: rem(16px);
+            font-weight: 500;
+            padding-bottom: 10px;
+         }
 
-      padding: 20px;
-      font-size: rem(12px);
-      font-weight: 500;
-      color: #00000099;
+         .publisher {
+            font-size: rem(12px);
+            font-weight: 500;
+         }
+
+         .location {
+            font-size: rem(12px);
+            font-weight: 500;
+            padding-bottom: 10px;
+            color: #00000099;
+         }
+
+         .date {
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+
+            padding: 20px;
+            font-size: rem(12px);
+            font-weight: 500;
+            color: #00000099;
+         }
+      }
+
+
    }
 
    .source {
@@ -93,6 +121,8 @@
       align-items: center;
       justify-content: flex-start;
       align-items: flex-end;
+      padding: 10px;
+      
       a {
          display: flex;
          // text-align: center;

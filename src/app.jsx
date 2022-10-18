@@ -16,8 +16,8 @@ export function App() {
    }, [])
 
    const getJobList = async () => {
-      // await dispatch(loadJobs())
-      await dispatch(loadDemoJobs())
+      await dispatch(loadJobs())
+      // await dispatch(loadDemoJobs())
    }
 
    return (

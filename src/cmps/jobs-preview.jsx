@@ -19,18 +19,27 @@ export const JobPreview = ({ job }) => {
 
    return (
       <section className="job-preview" >
-         {job.companyImg && <img src={job.companyImg} alt="" />}
-         {!job.companyImg && <img src={require(`../style/imgs/${sourceImg()}.png`)} alt="" />}
 
-         <div className="title">{job.jobTitle}</div>
-         <div className="publisher">{job.jobPublisher}</div>
-         <div className="location">{job.jobLocation}</div>
+         <div className="job-preview-container">
+            <div className="img">
+               {job.companyImg && <img src={job.companyImg} alt={job.source} />}
+               {!job.companyImg && <img src={require(`../style/imgs/${sourceImg()}.png`)} alt="" />}
+            </div>
 
-         <div className="date"></div>
-         <div className="date">{`${new Date(job.jobDate).toLocaleDateString('en-GB')} (${job.jobRealtiveDate})`}</div>
+            <div className="data">
+               <div className="title">{job.jobTitle}</div>
+               <div className="publisher">{job.jobPublisher}</div>
+               <div className="location">{job.jobLocation}</div>
+
+               <div className="date"></div>
+               <div className="date">{`${new Date(job.jobDate).toLocaleDateString('en-GB')} (${job.jobRealtiveDate})`}</div>
+            </div>
+
+         </div>
+
          <div className="source" style={{ '--c': sourceColor() }}>{job.source}</div>
 
-         <div className="link"><a href={job.linkPage} target="_blank">Page <FiExternalLink /></a></div>
+         <div className="link"><a href={job.linkPage} target="_blank">Apply<FiExternalLink /></a></div>
       </section>
    )
 }
